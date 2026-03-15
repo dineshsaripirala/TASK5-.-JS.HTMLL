@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stackly JS Practice</title>
+</head>
+<body>
+    <h1>JavaScript Practice Results</h1>
+    <p>Right-click this page, select <strong>Inspect</strong>, and click the <strong>Console</strong> tab to see the output.</p>
+
+    <script>
+    let employees = [
+    {name: "Ravi", salary: 25000},
+    {name: "Meena", salary: 60000},
+    {name: "Arun", salary: 45000},
+    {name: "Priya", salary: 80000},
+    {name: "John", salary: 30000}
+  ];
+  
+  // 1. Get employees whose salary is greater than 40000
+  const highEarners = employees.filter(emp => emp.salary > 40000);
+  console.log("High Earners:", highEarners);
+  
+  // 2. Find the first employee whose salary is above 70000
+  const topEarner = employees.find(emp => emp.salary > 70000);
+  console.log("First employee above 70000:", topEarner);
+  
+  // 3. Calculate the total salary of all employees
+  const totalSalary = employees.reduce((sum, emp) => sum + emp.salary, 0);
+  console.log("Total Salary:", totalSalary);
+  
+  // 4. Check if any employee salary is below 20000
+  const hasLowSalary = employees.some(emp => emp.salary < 20000);
+  console.log("Is any salary below 20000?:", hasLowSalary);
+  
+  // 5. Check if all employees salary are above 20000
+  const allAbove20k = employees.every(emp => emp.salary > 20000);
+  console.log("Are all salaries above 20000?:", allAbove20k);
+
+  // Initial product list
+let products = ["laptop", "mobile", "tablet", "smartwatch", "mobile"];
+
+// 1. Check if "tablet" exists in the product list
+let hasTablet = products.includes("tablet");
+console.log("Does 'tablet' exist?", hasTablet); 
+
+// 2. Find the first index of "mobile"
+let firstMobile = products.indexOf("mobile");
+console.log("First index of 'mobile':", firstMobile); 
+
+// 3. Find the last index of "mobile"
+let lastMobile = products.lastIndexOf("mobile");
+console.log("Last index of 'mobile':", lastMobile); 
+
+// 4. Check if "camera" exists
+let hasCamera = products.includes("camera");
+console.log("Does 'camera' exist?", hasCamera);
+
+
+let username = "  Dineshkarthik ";
+
+// 1. Remove extra spaces
+username = username.trim();
+console.log("Trimmed:", username); 
+
+// 2. Convert the username to uppercase
+let upperUsername = username.toUpperCase();
+console.log("Uppercase:", upperUsername); 
+
+// 3. Convert the username to lowercase
+let lowerUsername = username.toLowerCase();
+console.log("Lowercase:", lowerUsername); 
+
+// 4. Extract only first 6 characters of the username
+let slicedUsername = username.slice(0, 6);
+console.log("First 6 characters:", slicedUsername); 
+
+
+let games = ["cricket", "football", "hockey", "tennis"];
+
+// 1. Print all games using forEach()
+games.forEach((game) => {
+  console.log(game);
+});
+
+// 2. Create a new array using map()
+let formattedGames = games.map((game) => {
+  return "Game : " + game;
+});
+
+// Output the new array to verify
+console.log(formattedGames);
+
+
+// Initial array
+let marks = [45, 90, 23, 67, 88, 12];
+
+// 1. Sort marks in ascending order
+// We use (a, b) => a - b to ensure numeric sorting
+let ascending = [...marks].sort((a, b) => a - b);
+console.log("Ascending Order:", ascending);
+
+// 2. Sort marks in descending order
+// We use (a, b) => b - a to flip the logic
+let descending = [...marks].sort((a, b) => b - a);
+console.log("Descending Order:", descending);
+
+// 3. Reverse the original marks array
+
+let reversed = [...marks].reverse();
+console.log("Reversed Array:", reversed);
+
+
+let salaries = [10000, 20000, 30000, 40000];
+
+// 1. Find total salary paid by company
+const total=Salary = salaries.reduce((accumulator, currentSalary) => {
+    return accumulator + currentSalary;
+}, 0);
+
+// 2. Find average salary
+const averageSalary = totalSalary / salaries.length;
+
+console.log('Total Salary: ${totalSalary}');
+console.log('Average Salary: ${averageSalary}');
+
+
+// 1. Define the string
+let url = 'www.stackly.com';
+
+// 2. Use split() with the hyphen "-" as the separator
+let urlArray = url.split("-");
+
+// 3. Output the result
+console.log(urlArray); 
+// Output: ["www", "stackly"]
+
+
+let role = "python developer";
+
+// 1. Replace "python" with "javascript"
+let newRole = role.replace("python", "javascript");
+console.log("Updated Role:", newRole); 
+
+// 2. Check if role starts with "python"
+let startsWithPython = role.startsWith("python");
+console.log("Starts with 'python'?", startsWithPython);
+
+// 3. Check if role ends with "developer"
+let endsWithDeveloper = role.endsWith("developer");
+console.log("Ends with 'developer'?", endsWithDeveloper);
+
+
+let data = [1, 2, [3, 4, [5, 6]]];
+
+// Option 1: Specify the depth (2 levels deep)
+let flattened = data.flat(2);
+
+// Option 2: Use Infinity if you don't know how deep it goes
+// let flattened = data.flat(Infinity);
+
+console.log(flattened); 
+// Output: [1, 2, 3, 4, 5, 6]
+
+
+let sports = ["cricket", "football", "tennis", "hockey", "golf"];
+
+// 1. Extract football and tennis
+// football is at index 1, tennis is at index 2. 
+// We stop at index 3 to include tennis.
+let subGroup1 = sports.slice(1, 3);
+console.log("Football and Tennis:", subGroup1); 
+
+
+// 2. Extract first 3 sports
+// We start at index 0 and end at index 3.
+let subGroup2 = sports.slice(0, 3);
+console.log("First 3 sports:", subGroup2);
+  </script>
+</body>
+</html>
